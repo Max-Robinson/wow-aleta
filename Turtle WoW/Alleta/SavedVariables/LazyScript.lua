@@ -18,7 +18,7 @@ lsConf = {
 			["Alleta"] = {
 				["clearHistoryAfterCombat"] = false,
 				["initiateAutoAttack"] = true,
-				["showTargetCasts"] = false,
+				["mmIsVisible"] = true,
 				["defaultForm"] = "Claw",
 				["biteTracker"] = {
 					[1] = {
@@ -52,16 +52,9 @@ lsConf = {
 				["debug"] = false,
 				["biteSample"] = 25,
 				["healthHistorySize"] = 5,
-				["mmIsVisible"] = true,
+				["useImmunities"] = true,
 				["Immunities"] = {
 				},
-				["showActionAlways"] = true,
-				["showGankMessage"] = false,
-				["autoTarget"] = true,
-				["deathMinionIsVisible"] = false,
-				["minimapButtonPos"] = 256.119263815851,
-				["minionHidesOutOfCombat"] = false,
-				["trackBiteCrits"] = false,
 				["forms"] = {
 					["Shred"] = {
 						[1] = "callForm=CatCommon",
@@ -151,22 +144,6 @@ lsConf = {
 						[43] = "rip-sayInSay=Rip!-ifPlayer>30energy-1cp-ifTarget<42hp",
 						[44] = "rip-sayInSay=Rip!-ifPlayer>30energy-1cp-ifTimeToDeath<12s",
 					},
-					["CasterCommon"] = {
-						[1] = "use=Lesser Mana Potion-sayInSay=Lesser Mana Potion!-ifInCombat-ifPlayer<10%mana-ifNotItemInCooldown=Lesser Mana Potion",
-						[2] = "# A crowd controlled target is someone polymorphed into a sheep",
-						[3] = "# or sapped by a rogue, or seduced by a warlock's succubus, etc. ",
-						[4] = "# It's not participating in the combat.  All forms of crowd control",
-						[5] = "# break if you do damage to the target so stop all processing of",
-						[6] = "# additional LazyScrip lines if your current target is crowd ",
-						[7] = "# controlled!",
-						[8] = "stopAll-sayInSay=Crowd controlled target!-ifTargetIs=CCd",
-						[9] = "# crowd control your target if you can!",
-						[10] = "hibernate-ifTargetType=Beast,Dragonkin-ifPlayer>90mana-ifNotTargetImmune=hibernate",
-					},
-					["Maul"] = {
-						[1] = "callForm=BearCommon",
-						[2] = "maul-sayInSay=Maul!-ifPlayer>20rage",
-					},
 					["example-MsSmolderweb"] = {
 						[1] = "starfire-ifTarget=100%hp",
 						[2] = "-- Network/server lag delays the debuff appearing on the mob",
@@ -196,6 +173,22 @@ lsConf = {
 						[17] = "swipe-ifShiftDown",
 						[18] = "maul",
 					},
+					["Maul"] = {
+						[1] = "callForm=BearCommon",
+						[2] = "maul-sayInSay=Maul!-ifPlayer>20rage",
+					},
+					["CasterCommon"] = {
+						[1] = "use=Lesser Mana Potion-sayInSay=Lesser Mana Potion!-ifInCombat-ifPlayer<10%mana-ifNotItemInCooldown=Lesser Mana Potion",
+						[2] = "# A crowd controlled target is someone polymorphed into a sheep",
+						[3] = "# or sapped by a rogue, or seduced by a warlock's succubus, etc. ",
+						[4] = "# It's not participating in the combat.  All forms of crowd control",
+						[5] = "# break if you do damage to the target so stop all processing of",
+						[6] = "# additional LazyScrip lines if your current target is crowd ",
+						[7] = "# controlled!",
+						[8] = "stopAll-sayInSay=Crowd controlled target!-ifTargetIs=CCd",
+						[9] = "# crowd control your target if you can!",
+						[10] = "hibernate-ifTargetType=Beast,Dragonkin-ifPlayer>90mana-ifNotTargetImmune=hibernate",
+					},
 					["Claw"] = {
 						[1] = "callForm=CatCommon",
 						[2] = "claw-sayInSay=Claw!-ifPlayer>40energy",
@@ -217,7 +210,14 @@ lsConf = {
 						[2] = "swipe-sayInSay=Swipe!-ifPlayer>25rage",
 					},
 				},
-				["useImmunities"] = true,
+				["trackBiteCrits"] = false,
+				["autoTarget"] = true,
+				["showGankMessage"] = false,
+				["minionHidesOutOfCombat"] = false,
+				["minimapButtonPos"] = 256.119263815851,
+				["deathMinionIsVisible"] = false,
+				["showActionAlways"] = true,
+				["showTargetCasts"] = false,
 			},
 		},
 	},

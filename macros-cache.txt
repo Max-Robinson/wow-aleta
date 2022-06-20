@@ -1,3 +1,15 @@
 MACRO 1 "Assist Cantherle" Spell_Shadow_PainSpike
 /assist Cantherle
 END
+MACRO 2 "Claw" Ability_Druid_Rake
+/lazyscript Claw
+END
+MACRO 4 "Maul" Ability_Druid_Maul
+/lazyscript Maul
+END
+MACRO 3 "Shred" Ability_Druid_Shred
+/lazyscript Shred
+END
+MACRO 5 "Swipe" Ability_Druid_Swipe
+/lazyscript Swipe
+END

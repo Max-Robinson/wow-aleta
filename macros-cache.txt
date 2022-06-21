@@ -7,7 +7,7 @@ END
 MACRO 4 "Maul" Ability_Druid_Maul
 /lazyscript Maul
 END
-MACRO 3 "Shred" Ability_Druid_Shred
+MACRO 3 "Shred" Spell_Magic_PolymorphChicken
 /lazyscript Shred
 END
 MACRO 5 "Swipe" Ability_Druid_Swipe

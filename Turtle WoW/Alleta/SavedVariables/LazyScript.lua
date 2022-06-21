@@ -18,8 +18,8 @@ lsConf = {
 			["Alleta"] = {
 				["clearHistoryAfterCombat"] = false,
 				["initiateAutoAttack"] = true,
-				["mmIsVisible"] = true,
-				["defaultForm"] = "Claw",
+				["showTargetCasts"] = false,
+				["defaultForm"] = "CatCommon",
 				["biteTracker"] = {
 					[1] = {
 						[1] = 0,
@@ -109,7 +109,7 @@ lsConf = {
 						[8] = "# get in bear form.  This assumes if you are less than half your",
 						[9] = "# health that you should automatically switch to bear form.  Adjust",
 						[10] = "# the number to suite your taste and what works well in practice.",
-						[11] = "bear-ifPlayer<50%hp",
+						[11] = "#cat-ifPlayer<50%hp",
 						[12] = "# A crowd controlled target is someone polymorphed into a sheep",
 						[13] = "# or sapped by a rogue, or seduced by a warlock's succubus, etc. ",
 						[14] = "# It's not participating in the combat.  All forms of crowd control",
@@ -144,15 +144,6 @@ lsConf = {
 						[43] = "rip-sayInSay=Rip!-ifPlayer>30energy-1cp-ifTarget<42hp",
 						[44] = "rip-sayInSay=Rip!-ifPlayer>30energy-1cp-ifTimeToDeath<12s",
 					},
-					["example-MsSmolderweb"] = {
-						[1] = "starfire-ifTarget=100%hp",
-						[2] = "-- Network/server lag delays the debuff appearing on the mob",
-						[3] = "-- Let's use the history instead",
-						[4] = "hibernate-ifHistory=1=starfire",
-						[5] = "starfire-ifTargetIs=CCd",
-						[6] = "-- Onoes! Hibernate broke early",
-						[7] = "hibernate",
-					},
 					["example-allPurpose"] = {
 						[1] = "-- Uncomment to use feral faerie fire if you have it",
 						[2] = "--feralFire-ifTargetInMeleeRange-ifNotTargetHasDebuff=faerieFire",
@@ -173,9 +164,14 @@ lsConf = {
 						[17] = "swipe-ifShiftDown",
 						[18] = "maul",
 					},
-					["Maul"] = {
-						[1] = "callForm=BearCommon",
-						[2] = "maul-sayInSay=Maul!-ifPlayer>20rage",
+					["example-MsSmolderweb"] = {
+						[1] = "starfire-ifTarget=100%hp",
+						[2] = "-- Network/server lag delays the debuff appearing on the mob",
+						[3] = "-- Let's use the history instead",
+						[4] = "hibernate-ifHistory=1=starfire",
+						[5] = "starfire-ifTargetIs=CCd",
+						[6] = "-- Onoes! Hibernate broke early",
+						[7] = "hibernate",
 					},
 					["CasterCommon"] = {
 						[1] = "use=Lesser Mana Potion-sayInSay=Lesser Mana Potion!-ifInCombat-ifPlayer<10%mana-ifNotItemInCooldown=Lesser Mana Potion",
@@ -188,6 +184,10 @@ lsConf = {
 						[8] = "stopAll-sayInSay=Crowd controlled target!-ifTargetIs=CCd",
 						[9] = "# crowd control your target if you can!",
 						[10] = "hibernate-ifTargetType=Beast,Dragonkin-ifPlayer>90mana-ifNotTargetImmune=hibernate",
+					},
+					["Maul"] = {
+						[1] = "callForm=BearCommon",
+						[2] = "maul-sayInSay=Maul!-ifPlayer>20rage",
 					},
 					["Claw"] = {
 						[1] = "callForm=CatCommon",
@@ -212,12 +212,12 @@ lsConf = {
 				},
 				["trackBiteCrits"] = false,
 				["autoTarget"] = true,
-				["showGankMessage"] = false,
-				["minionHidesOutOfCombat"] = false,
-				["minimapButtonPos"] = 256.119263815851,
 				["deathMinionIsVisible"] = false,
+				["minionHidesOutOfCombat"] = false,
+				["minimapButtonPos"] = 327.9813130362427,
+				["showGankMessage"] = false,
 				["showActionAlways"] = true,
-				["showTargetCasts"] = false,
+				["mmIsVisible"] = true,
 			},
 		},
 	},

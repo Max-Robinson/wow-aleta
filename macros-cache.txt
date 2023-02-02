@@ -7,6 +7,15 @@ END
 MACRO 4 "Maul" Ability_Druid_Maul
 /lazyscript Maul
 END
+MACRO 8 "MFRdruidBEAR" Ability_Druid_Berserk
+/lazyscript MFRdruidBEAR
+END
+MACRO 7 "MFRdruidCAT" ability_deathknight_summongargoyle
+/lazyscript MFRdruidCAT
+END
+MACRO 6 "MFRdruidNELF" Spell_Nature_EnchantArmor
+MFRdruidNELF
+END
 MACRO 3 "Shred" Spell_Magic_PolymorphChicken
 /lazyscript Shred
 END

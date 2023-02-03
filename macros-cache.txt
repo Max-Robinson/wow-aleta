@@ -7,6 +7,12 @@ END
 MACRO 4 "Maul" Ability_Druid_Maul
 /lazyscript Maul
 END
+MACRO 9 "MFR Challenge" Ability_Creature_Poison_05
+/lazyscript MFRBearChallengeRoar
+END
+MACRO 10 "MFRBearReHealth" Spell_Arcane_PortalIronForge
+/lazyscript MFRBearFrenziedRegen
+END
 MACRO 8 "MFRdruidBEAR" Ability_Druid_Berserk
 /lazyscript MFRdruidBEAR
 END

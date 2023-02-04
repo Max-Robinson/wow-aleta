@@ -10,9 +10,14 @@ END
 MACRO 8 "MFRdruidBEAR" Ability_Druid_Berserk
 /lazyscript MFRdruidBEAR
 END
-MACRO 7 "MFRdruidCAT" ability_deathknight_summongargoyle
-/lazyscript MFRdruidCAT
+MACRO 11 "MFRdruidCatBACK" Ability_Druid_MasterShapeshifter
+/lazyscript MFRCatCommon
+/lazyscript MFRDruidCatBACK
+END
+MACRO 7 "MFRdruidCatSOLO" ability_deathknight_summongargoyle
+/lazyscript MFRCatCommon
+/lazyscript MFRDruidCatSOLO
 END
 MACRO 6 "MFRdruidNELF" Spell_Nature_EnchantArmor
-MFRdruidNELF
+/lazyscript MFRdruidNELF
 END
